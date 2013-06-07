@@ -16,7 +16,9 @@
 
 - (void)addItemWithText:(NSString *)text;
 - (void)addMenuTitleWithText:(NSString *)text;
+- (void)addCancelButtonWithText:(NSString *)text;
 - (UIButton *)getItemAtIndex:(int)index;
+- (NSArray *)getAllItems;
 
 @end
 

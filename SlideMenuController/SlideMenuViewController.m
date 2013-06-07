@@ -91,6 +91,25 @@
     [menuItemsWrapper addSubview:menuTitle];
 }
 
+- (void)addCancelButtonWithText:(NSString *)text
+{
+    // enlarge wrapper to make room for cancelButton
+    
+    menuItemsWrapper.frame = CGRectMake(menuItemsWrapper.frame.origin.x, menuItemsWrapper.frame.origin.x, menuItemsWrapper.frame.size.width, menuItemsWrapper.frame.size.height + buttonHeight + marginBetweenItems);
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame = CGRectMake(
+                                    0 ,
+                                    menuItemsWrapper.frame.size.height - buttonHeight,
+                                    self.view.frame.size.width,
+                                    buttonHeight);
+    cancelButton.backgroundColor = [UIColor colorWithRed:60/255.0 green:60/255.0 blue:59/255.0 alpha:1];
+    [cancelButton setTitle:text forState:UIControlStateNormal];
+    [menuItemsWrapper addSubview:cancelButton];
+    
+    [cancelButton addTarget:nil action:@selector(collapseMenu) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
 // add a new item to our menu
 - (void)addItemWithText:(NSString *)text
 {
@@ -136,6 +155,11 @@
 - (UIButton *)getItemAtIndex:(int)index
 {
     return [menuItems objectAtIndex:index];
+}
+
+- (NSArray *)getAllItems
+{
+    return menuItems;
 }
 
 #pragma mark closing menu

@@ -28,16 +28,24 @@
 }
 
 - (IBAction)intMenuButtonPressed:(id)sender {
+    
+    // for the time being you should respect logical order when intializing the menu
+    // title
+    // items from top to bottom
+    // cancel button
+    // title & cancel button are optional
+    // sorry for the inconvenience, I will make the view controller better as soon as possible
     SlideMenuViewController *menu = [[SlideMenuViewController alloc] init];
     
     [menu addMenuTitleWithText:@"Changer la photo de couverture"];
     
-    [menu addItemWithText:@"Test"];
-    [menu addItemWithText:@"Test 2"];
-    [menu addItemWithText:@"Test 3"];
-    [menu addItemWithText:@"Test 4"];
-    [menu addItemWithText:@"Test 5"];
+    [menu addItemWithText:@"Retirer la photo actuelle"];
+    [menu addItemWithText:@"Importer depuis Facebook"];
+    [menu addItemWithText:@"Importer depuis Twitter"];
+    [menu addItemWithText:@"Choisir dans votre galerie"];
+    [menu addItemWithText:@"Choisir dans votre pellicule"];
 
+    [menu addCancelButtonWithText:@"ANNULER"];
 
     // add and show the menu
     [self.view addSubview:menu.view];
