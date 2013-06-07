@@ -18,6 +18,7 @@
 		5E85FC3D1761158400396653 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E85FC3C1761158400396653 /* Default-568h@2x.png */; };
 		5E85FC401761158400396653 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E85FC3F1761158400396653 /* ViewController.m */; };
 		5E85FC431761158400396653 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E85FC411761158400396653 /* ViewController.xib */; };
+		5E85FC4B1761179500396653 /* SlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E85FC4A1761179500396653 /* SlideMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		5E85FC3E1761158400396653 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5E85FC3F1761158400396653 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5E85FC421761158400396653 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5E85FC491761179500396653 /* SlideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuViewController.h; sourceTree = "<group>"; };
+		5E85FC4A1761179500396653 /* SlideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				5E85FC3E1761158400396653 /* ViewController.h */,
 				5E85FC3F1761158400396653 /* ViewController.m */,
 				5E85FC411761158400396653 /* ViewController.xib */,
+				5E85FC491761179500396653 /* SlideMenuViewController.h */,
+				5E85FC4A1761179500396653 /* SlideMenuViewController.m */,
 				5E85FC2D1761158400396653 /* Supporting Files */,
 			);
 			path = SlideMenuController;
@@ -176,6 +181,7 @@
 				5E85FC331761158400396653 /* main.m in Sources */,
 				5E85FC371761158400396653 /* AppDelegate.m in Sources */,
 				5E85FC401761158400396653 /* ViewController.m in Sources */,
+				5E85FC4B1761179500396653 /* SlideMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
