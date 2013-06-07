@@ -124,7 +124,18 @@
 - (void)itemPressed:(id)sender
 {
     UIButton *buttonPressed = (UIButton *)sender;
-    NSLog(@"%f %f", buttonPressed.frame.size.width,  buttonPressed.frame.size.height);
+    NSLog(@"button index %d", [menuItems indexOfObject:buttonPressed]);
+    
+    // trigger optional delegate methods
+    if ([self.delegate respondsToSelector:@selector(menuItemPressed:atIndex:)]) {
+        [self.delegate menuItemPressed:buttonPressed atIndex:[menuItems indexOfObject:buttonPressed]];
+    }
+}
+
+// return a button at specifi index for custom manipulation
+- (UIButton *)getItemAtIndex:(int)index
+{
+    return [menuItems objectAtIndex:index];
 }
 
 #pragma mark closing menu
